@@ -10,7 +10,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "eventhook",
 	Short: "Webhook infrastructure runtime",
-	Long:  "EventHook — Stripe-quality webhook observability for every event in your app.",
+	Long:  "EventHook — Full webhook observability for every event in your app.",
 }
 
 func main() {

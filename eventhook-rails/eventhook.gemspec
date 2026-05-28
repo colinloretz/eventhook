@@ -3,7 +3,7 @@ require_relative 'lib/eventhook/version'
 Gem::Specification.new do |s|
   s.name        = 'eventhook'
   s.version     = EventHook::VERSION
-  s.summary     = 'Stripe-quality webhook observability for every event in your app'
+  s.summary     = 'Full webhook observability for every event in your app'
   s.description = 'Drop-in webhook infrastructure for Rails. Inbound verification, outbound delivery, full dashboard.'
   s.homepage    = 'https://eventhook.dev'
   s.license     = 'MIT'

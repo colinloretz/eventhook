@@ -1,5 +1,5 @@
 class Eventhook < Formula
-  desc "Webhook infrastructure runtime — Stripe-quality observability for every event"
+  desc "Webhook infrastructure runtime with full observability for every event"
   homepage "https://eventhook.dev"
   version "0.1.0"
 

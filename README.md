@@ -1,6 +1,6 @@
 # EventHook
 
-Stripe-quality webhook observability for every event in your app.
+Full webhook observability for every event in your app.
 
 Drop in a library, mount a dashboard, and immediately see every inbound and outbound webhook flowing through your application — with full payloads, delivery history, and one-click replay.
 
@@ -14,7 +14,7 @@ EventHook.emit('payment.completed', { order_id: 123, amount: 9900 })
 
 EventHook is a self-hosted webhook infrastructure runtime. It handles:
 
-- **Inbound webhooks** — receive, verify signatures, and record every Stripe, GitHub, or custom webhook that hits your app
+- **Inbound webhooks** — receive, verify signatures, and record every inbound webhook that hits your app (Stripe, GitHub, Shopify, or custom)
 - **Outbound delivery** — fan out events to your registered endpoints with automatic retry and exponential backoff
 - **Full observability** — every payload, every delivery attempt, every response body, all queryable in a live dashboard
 
