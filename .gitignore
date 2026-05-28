@@ -1,0 +1,7 @@
+eventhook
+dashboard/dist/
+dashboard/node_modules/
+*.env
+.env
+.claude
+Claude.md
