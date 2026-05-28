@@ -1,4 +1,3 @@
--- +migrate Up
 CREATE TABLE deliveries (
   id                   UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   event_id             UUID NOT NULL REFERENCES events(id),
@@ -18,6 +17,3 @@ CREATE INDEX idx_deliveries_pending ON deliveries(next_attempt)
   WHERE status IN ('pending', 'retrying');
 CREATE INDEX idx_deliveries_event ON deliveries(event_id, created_at DESC);
 CREATE INDEX idx_deliveries_status ON deliveries(status, created_at DESC);
-
--- +migrate Down
-DROP TABLE deliveries;

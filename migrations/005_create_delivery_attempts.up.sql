@@ -1,4 +1,3 @@
--- +migrate Up
 CREATE TABLE delivery_attempts (
   id               UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   delivery_id      UUID NOT NULL REFERENCES deliveries(id),
@@ -14,6 +13,3 @@ CREATE TABLE delivery_attempts (
 );
 
 CREATE INDEX idx_delivery_attempts_delivery ON delivery_attempts(delivery_id, attempted_at DESC);
-
--- +migrate Down
-DROP TABLE delivery_attempts;

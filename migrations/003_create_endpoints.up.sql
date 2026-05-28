@@ -1,4 +1,3 @@
--- +migrate Up
 CREATE TABLE endpoints (
   id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   url         TEXT NOT NULL,
@@ -9,6 +8,3 @@ CREATE TABLE endpoints (
   metadata    JSONB DEFAULT '{}',
   created_at  TIMESTAMPTZ DEFAULT NOW()
 );
-
--- +migrate Down
-DROP TABLE endpoints;

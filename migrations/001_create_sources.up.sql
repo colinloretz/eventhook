@@ -1,4 +1,3 @@
--- +migrate Up
 CREATE TABLE sources (
   id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name        TEXT NOT NULL,
@@ -8,6 +7,3 @@ CREATE TABLE sources (
   metadata    JSONB DEFAULT '{}',
   created_at  TIMESTAMPTZ DEFAULT NOW()
 );
-
--- +migrate Down
-DROP TABLE sources;
