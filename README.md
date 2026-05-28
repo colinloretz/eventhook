@@ -219,4 +219,4 @@ cd dashboard && npm run dev
 
 ## License
 
-MIT
+[Elastic License 2.0](LICENSE) — free to self-host, cannot be offered as a competing managed service.

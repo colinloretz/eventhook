@@ -1,5 +1,6 @@
 # eventhook-rails
 
+
 Drop-in webhook observability for Rails. See every inbound and outbound webhook in a live dashboard — with full payloads, delivery history, and one-click replay.
 
 ## Installation
