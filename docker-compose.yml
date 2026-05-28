@@ -31,7 +31,7 @@ services:
     ports:
       - "7676:7676"
     environment:
-      EVENTHOOK_DATABASE_URL: postgres://eventhook:eventhook@postgres:5432/eventhook
+      EVENTHOOK_DATABASE_URL: postgres://eventhook:eventhook@postgres:5432/eventhook?sslmode=disable
       EVENTHOOK_REDIS_URL: redis://redis:6379
       EVENTHOOK_API_KEY: dev-api-key
       EVENTHOOK_ENV: development

@@ -1,6 +1,7 @@
-eventhook
+bin/
 dashboard/dist/
 dashboard/node_modules/
+assets/dashboard/
 *.env
 .env
 .claude

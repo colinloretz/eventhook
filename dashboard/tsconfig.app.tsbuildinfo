@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/types.ts","./src/components/layout.tsx","./src/components/statusbadge.tsx","./src/pages/deliveriespage.tsx","./src/pages/deliverydetailpage.tsx","./src/pages/endpointspage.tsx","./src/pages/eventdetailpage.tsx","./src/pages/eventspage.tsx"],"version":"5.9.3"}
