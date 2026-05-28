@@ -17,9 +17,7 @@ type Server struct {
 }
 
 func NewServer(cfg *config.Config, st store.Store) *Server {
-	if cfg.Env == "production" {
-		gin.SetMode(gin.ReleaseMode)
-	}
+	gin.SetMode(gin.ReleaseMode) // always; debug output is noise
 
 	s := &Server{cfg: cfg, store: st}
 	s.router = gin.New()
