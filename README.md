@@ -191,16 +191,16 @@ The Makefile builds the React app, copies the dist into `assets/dashboard/`, and
 ## Development
 
 ```bash
-# Start dependencies
-docker compose up postgres redis -d
+# Zero-config dev mode — auto-starts postgres + redis via docker, runs migrations,
+# serves the runtime, and tails events live in the terminal
+make build
+./bin/eventhook dev
+```
 
-# Run the server locally (hot-reload Go changes)
-EVENTHOOK_DATABASE_URL="postgres://eventhook:eventhook@localhost:5432/eventhook?sslmode=disable" \
-  go run ./cmd/eventhook
-
-# Run dashboard dev server (proxies API to :7676)
+```bash
+# Dashboard hot-reload (proxies API calls to :7676)
 cd dashboard && npm run dev
-# Dashboard available at http://localhost:5173/dashboard/
+# http://localhost:5173/dashboard/
 ```
 
 ---
@@ -209,10 +209,10 @@ cd dashboard && npm run dev
 
 - [x] Go runtime — API, worker pool, retry
 - [x] React dashboard — event stream, delivery detail, endpoint management
-- [ ] Rails gem — `EventHook.emit`, engine mount, Stripe/GitHub verification
+- [x] Rails gem — `EventHook.emit`, engine mount, Stripe/GitHub/Shopify verification, dashboard proxy
+- [x] `eventhook dev` CLI — auto-starts postgres/redis, live event tail, cross-platform release builds
 - [ ] Laravel package
 - [ ] Node/TypeScript SDK
-- [ ] `eventhook dev` CLI — embedded Postgres, zero-config local setup
 - [ ] Managed cloud (eventhook.dev)
 
 ---
